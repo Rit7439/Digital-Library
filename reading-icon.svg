@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Person reading silhouette -->
+  <g fill="black">
+    <!-- Head -->
+    <circle cx="100" cy="50" r="25"/>
+    <!-- Body -->
+    <ellipse cx="100" cy="110" rx="30" ry="35"/>
+    <!-- Left arm -->
+    <rect x="45" y="85" width="20" height="50" rx="10" transform="rotate(-35 55 85)"/>
+    <!-- Right arm -->
+    <rect x="135" y="85" width="20" height="50" rx="10" transform="rotate(35 145 85)"/>
+    <!-- Book on left -->
+    <rect x="30" y="90" width="35" height="60" rx="3" transform="rotate(-25 47 120)"/>
+    <line x1="40" y1="95" x2="55" y2="155" stroke="black" stroke-width="3"/>
+    <!-- Legs -->
+    <ellipse cx="85" cy="160" rx="12" ry="25"/>
+    <ellipse cx="115" cy="160" rx="12" ry="25"/>
+  </g>
+</svg>

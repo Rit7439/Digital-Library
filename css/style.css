@@ -1,0 +1,132 @@
+:root {
+    --primary: #1a365d;
+    --accent: #b45309;
+    --background: #fdfbf7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    color: #1f2937;
+}
+
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-gradient {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.45), transparent);
+}
+
+#heroCaption {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.2s ease;
+}
+
+#heroCaption.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.rating-badge {
+    background: rgba(255, 255, 255, 0.95);
+    color: #1f2937;
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-size: 12px;
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.stars {
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    font-family: inherit;
+}
+
+.stars .stars-empty {
+    color: #e5e7eb;
+}
+
+.stars .stars-filled {
+    color: #f59e0b;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.book-card {
+    transition: all .35s ease;
+    position: relative;
+}
+
+.book-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.book-card img {
+    transition: transform .6s ease;
+}
+
+.book-card:hover img {
+    transform: scale(1.08);
+}
+
+.book-card h3 {
+    transition: color .3s ease;
+}
+
+.book-card:hover h3 {
+    color: #1a365d;
+}
+
+.book-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0 0 0 rgba(180, 83, 9, 0);
+    transition: .35s ease;
+}
+
+.book-card:hover::after {
+    box-shadow: 0 0 0 2px rgba(180, 83, 9, 0.15);
+}
